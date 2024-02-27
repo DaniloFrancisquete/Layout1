@@ -1,0 +1,158 @@
+body{
+    background: #f2f2f2;
+    margin: 0;
+    color: #333;
+    font-family: "Roboto",sans-serif;
+}
+.container{
+    max-width: 1200px;
+    overflow: hidden;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+#topo{
+background: #272930;
+width: 100%;
+overflow: hidden;/*saber o tamanho dele*/
+}
+
+.logo{
+    color: #fff;
+    vertical-align: middle;
+    font-size: 32px;
+    text-transform: uppercase;
+    float: left;
+    padding-top: 17px;    
+}
+.logo img{
+    vertical-align: middle;
+}
+
+.menu{
+    float: right;
+}
+.menu .nav{
+    padding: 0;
+    list-style: none;
+}
+.menu .nav li {
+    display: inline-block; /*ficar todo conteudo na mesma linha colocando block pode aplicar outros elementos*/
+    padding: 15px 15px;
+}
+.nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.nav li a:hover{
+    color: #2d6ff7;
+}
+
+#banner{
+    background: url(../imagens/pexels-pixabay-434337.jpg) no-repeat center center;
+    background: cover;
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+#banner h2{
+    text-align: center;
+    margin:0;
+    padding-top: 130px;
+    font-size: 62px;
+    color: #fff;
+    position: relative;
+    text-shadow:  5px 5px 10px #333;
+}
+
+#banner .filtro {
+    width: 100%;
+    height: 100%;
+    background: #333;
+    position: absolute;
+    top: 0; left: 0;
+    opacity: 0.75;
+}
+
+#conteudo {
+  min-height: 500px ;
+}
+
+#conteudo .container {
+    background: #fff;
+    border: solid 1px #ddd;
+}
+#conteudo .figura {
+    width: 100%;
+    border-radius: 10px;
+    border : solid 1px #999;
+}
+
+#conteudo .info {
+    width: 75%;
+    float: left;
+    padding: 25px 20px;
+    box-sizing: border-box;
+    text-align: justify;
+    line-height: 24px;
+}
+
+#conteudo .lateral {
+    width: 25%;
+    float: right;
+    padding: 25px 15px;
+    box-sizing: border-box;
+}
+
+.lateral .ultimas-noticias{
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.lateral .ultimas-noticias img{
+    float: left;
+    width: 30%;
+    border: solid 1px #999;
+    box-sizing: border-box;
+}
+
+.lateral .ultimas-noticias h3{
+    text-align: justify;
+    float: right;
+    width: 70%;
+    box-sizing: border-box;
+    font-size: 18px;
+    margin: 0;
+    padding-left: 10px;
+}
+
+.menu-lateral {
+    margin-top: 50px;
+}
+
+.menu-lateral ul {
+    list-style: none;
+    padding: 0;
+}
+.menu-lateral ul li {
+    padding-bottom: dashed 1px #ddd;
+    font-weight: bold;
+}
+.menu-lateral li a {
+    text-decoration: none;
+     color: #333;
+     font-size: 18px;
+     padding-left: 10px;
+     width: 100%;
+     display: inline-block;
+     padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.menu-lateral li a:hover {
+    color: #2d6ff7;
+}
+.menu-lateral li:hover{
+    background: #272930;
+}
