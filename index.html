@@ -24,10 +24,19 @@
             </div>
             <nav class="menu">
                 <ul class="nav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Quem Somos</a></li>
-                    <li><a href="#">Serviços</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="submenu">
+                        <a href="colunas.html">Layout em Colunas</a>
+                            <ul class="dropdown">
+                            <li><a href="#">Menu 1</a></li>
+                            <li><a href="#">Menu 2</a></li>
+                            <li><a href="#">Menu 3</a></li>
+                            <li><a href="#">Menu 4</a></li>
+                        </ul>
+                    
+                    </li>
+                    <li><a href="posicionamentos.html">Posicionamentos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -36,7 +45,7 @@
     <!--banner -->
     <section id="banner">
         <div class="filtro"></div>
-        <h2>Texto Destaque</h2>
+        <h2>Destaque Trans<wbr>formação</h2>
     </section>
 
     <!--conteudo-->
@@ -44,23 +53,70 @@
         <div class="container">
             <article class="info">
                 <h1>Conteúdo principal desta página</h1>
+
+                <audio controls autoplay autostart muted >
+                    <source src="#" type="audio/x-wav">
+                    Seu navegador não suporta esse audio
+                </audio>
+
+                <div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Eos expedita, laboriosam adipisci culpa voluptatem facilis
                     consequatur delectus eius dolorum repudiandae ducimus totam architecto.
                     Consequatur corrupti aperiam deleniti labore quam sapiente?</p>
-                    <p>
+                </div>  
+                <ul class="lista-cursos">
+                    <li>PHP</li>
+                    <li>HTML</li>
+                    <li>JAVA</li>
+                </ul>
+
+                        <figure>
                         <img class="figura"  src="imagens/office.jpg" alt="Imagem de exemplo">
-                    </p>
+                        <figcaption>Imagem do meu escritório</figcaption>
+                        </figure>
                     
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Eos expedita, laboriosam adipisci culpa voluptatem facilis
                     consequatur delectus eius dolorum repudiandae ducimus totam architecto.
                     Consequatur corrupti aperiam deleniti labore quam sapiente?</p>
+
+                    <h2 class="irmao">Sletores Avançados,selecionando as tags irmâs
+
+                    </h2>
+
+                    <p>consequatur delectus eius dolorum repudiandae ducimus totam architecto.
+                        Consequatur corrupti aperiam deleniti labore quam sapiente</p>
+
+                    <p>consequatur delectus eius dolorum repudiandae ducimus totam architecto.
+                            Consequatur corrupti aperiam deleniti labore quam sapiente</p>
+                        
+                        <h2>Dividindo texto em Colunas</h2>
+                        <div class="bloco-colunas">
+                            <p>consequatur delectus eius dolorum repudiandae ducimus totam architecto.
+                                Consequatur corrupti aperiam deleniti labore quam sapiente
+                                consequatur delectus eius dolorum repudiandae ducimus totam architecto.
+                                Consequatur corrupti aperiam deleniti labore quam sapiente
+                                consequatur delectus eius dolorum repudiandae ducimus totam architecto.
+                                Consequatur corrupti aperiam deleniti labore quam sapiente
+                                consequatur delectus eius dolorum repudiandae ducimus totam architecto.
+                                Consequatur corrupti aperiam deleniti labore quam sapiente
+                                consequatur delectus eius dolorum repudiandae ducimus totam architecto.
+                                Consequatur corrupti aperiam deleniti labore quam sapiente
+                                consequatur delectus eius dolorum repudiandae ducimus totam architecto.
+                                Consequatur corrupti aperiam deleniti labore quam sapiente
+                                consequatur delectus eius dolorum repudiandae ducimus totam architecto.
+                                Consequatur corrupti aperiam deleniti labore quam sapiente
+                                consequatur delectus eius dolorum repudiandae ducimus totam architecto.
+                                Consequatur corrupti aperiam deleniti labore quam sapiente</p>
+                            
+                        </div>
+                            
             </article>
 
             <aside class="lateral">
-                <h2>Destaques</h2>
                 <div class="noticias">
+                    <h2>Destaques</h2>
                     <div class="ultimas-noticias">
                         <img src="imagens/office.jpg" alt="Noticia">
                         <h3>Titulo da noticia em destaque número um</h3>
@@ -90,14 +146,20 @@
                         <li><a href="#">Serviço 4</a></li>
                         <li><a href="#">Serviço 5</a></li>
                     </ul>
+
                 </div>
             </aside>
         </div>
     </main>
-
+<section id="mapa">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.1046820732313!2d-51.14975412467757!3d-23.311960378971932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb437cc4450e41%3A0xed0644bc911dae7e!2sBoulevard%20Shopping%20Londrina!5e0!3m2!1spt-BR!2sbr!4v1709211705684!5m2!1spt-BR!2sbr" 
+     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
 
     <!--rodapé-->
-    <div id="rodape"></div>
+    <footer id="rodape">
+        <p>Desenvolvedor Danilo - Todos os direitos reservado</p>
+    </footer>
 
 </body>
 

@@ -1,20 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     background: #f2f2f2;
     margin: 0;
     color: #333;
     font-family: "Roboto",sans-serif;
+
+}
+
+a {
+    text-decoration: none;
+    color: #2d6ff7;
 }
 .container{
     max-width: 1200px;
     overflow: hidden;
     padding: 0 20px;
     margin: 0 auto;
+
 }
 
 #topo{
 background: #272930;
 width: 100%;
-overflow: hidden;/*saber o tamanho dele*/
+/*overflow: hidden;/*saber o tamanho dele*/
+height: 80px;
+
+}
+
+#topo .container {
+    overflow: visible;
+    width: 100%;
 }
 
 .logo{
@@ -47,6 +65,32 @@ overflow: hidden;/*saber o tamanho dele*/
 }
 .nav li a:hover{
     color: #2d6ff7;
+    transition: all 1s;
+}
+
+.submenu{
+    position: relative;
+}
+
+.dropdown{
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    z-index: 99;
+    padding: 10px 5px;
+    background: #272930;
+    min-width: 180px;
+    border: solid #ddd 1px;
+    border-radius: 0px 10px 10px 10px;
+    display: none;
+}
+
+.submenu:hover .dropdown{
+    display: block;
+}
+
+.menu .nav .dropdown li{
+    display: block;
 }
 
 #banner{
@@ -65,6 +109,26 @@ overflow: hidden;/*saber o tamanho dele*/
     color: #fff;
     position: relative;
     text-shadow:  5px 5px 10px #333;
+}
+
+#banner h2::after{
+    content: "";
+    width: 20%;
+    height: 5px;
+    background: #fff;
+    display: block;
+    margin: 20px auto 0 auto;
+    box-shadow:  2px 2px 5px #333;
+}
+
+#banner h2::selection {
+    background: #333 ;
+    color: #2d6ff7;
+}
+
+#banner h1::selection {
+    background: #333 ;
+    color: #2d6ff7;
 }
 
 #banner .filtro {
@@ -99,6 +163,10 @@ overflow: hidden;/*saber o tamanho dele*/
     line-height: 24px;
 }
 
+#conteudo .info.completa{
+    width: 100%;
+}
+
 #conteudo .lateral {
     width: 25%;
     float: right;
@@ -115,6 +183,11 @@ overflow: hidden;/*saber o tamanho dele*/
     width: 30%;
     border: solid 1px #999;
     box-sizing: border-box;
+}
+
+.lateral .ultimas-noticias img:hover{
+    transition: all 1s;
+    margin-bottom: 5px;
 }
 
 .lateral .ultimas-noticias h3{
@@ -155,4 +228,348 @@ overflow: hidden;/*saber o tamanho dele*/
 }
 .menu-lateral li:hover{
     background: #272930;
+}
+
+.menu-lateral ul li:first-child{
+    background: #f7f7f7;
+}
+
+.menu-lateral ul li:last-child{
+  border: none;
+}
+
+.menu-lateral ul li:nth-child(3) {
+   background: #999;
+  }
+
+.menu-lateral ul li:nth-child(2n + 1) {
+    background: #999;
+   }
+
+/*seletores irmãos*/
+/* + Seleciona o 1 irmão
+    ~ Seleciona todos os irmãos
+    > Filhos Diretos
+    */
+
+.irmao ~ p{
+border:solid 1px #999 ;
+padding: 10px;
+background: #ddd;
+}
+
+.lista-cursos li {
+    list-style: square;
+}
+
+.lista-cursos li::marker{
+    color: #2d6ff7;
+    font-size: 34px;
+}
+
+.info p::first-letter{
+    font-size: 54px;
+}
+
+.info > p {
+    text-align: center;
+}
+
+.menu-lateral ul li:first-child {
+    background:  #f7f7f7;
+}
+
+.menu-lateral ul li::after {
+    content: "Texto após a tag";
+
+}
+
+.menu-lateral ul li > a::before {
+    content: "> ";
+}
+
+#rodape{
+background: #272930;
+color: #ddd;
+text-align: center;
+padding: 25px 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #2d6ff7;
+    margin-top: 0;
+}
+
+/*Página de Contato - Formulário */
+
+.contato {
+    width: 100%;
+    overflow: hidden;
+}
+
+.contato .dupla{
+    box-sizing: border-box;
+   width: 48%; 
+   float: left ;
+   margin-bottom: 20px;
+   margin-left: 10px;
+}
+
+.contato .bt-grup {
+    width: 100%;
+    float: left;
+    margin-left: 10px;
+}
+
+
+
+.contato input, .contato textarea, .contato select{
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px #999;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 12px;
+    background: #f7f7f7;
+    box-sizing: border-box ;
+}
+
+
+.contato label{
+    width: 100%;
+    display: block;
+}
+
+.contato button{
+    display: block;
+}
+
+.contato input[type="color"]{
+    max-width: 25px;
+    padding: 0;
+}
+
+.contato input[type="checkbox"],.contato input[type="radio"]{
+  width: auto;
+}
+
+
+
+.contato .bt {
+    min-width: auto;
+    width: auto;
+    border: solid 1px #333;
+    background: #2d6ff7;
+    color: #fff;
+    cursor: pointer;
+    margin-left:10px;
+}
+
+.contato .limpar{
+    background: #f7f7f7;
+    color: #2d6ff7;
+}
+
+.contato .leitura {
+    background: #d9ddeb;
+    color: #878999;
+    box-shadow: inset 0 0 4px #fff;
+    cursor: no-drop;
+}
+
+.contato label span {
+  color: red;  
+}
+.mapa iframe{
+    width: 100%;
+    box-shadow: 0 0 3px #999 ;
+}
+
+#mapa iframe{
+  width: 100%;
+  height: 250px;
+  margin-top: 40px;
+border-top:  solid 10px #333;
+}
+/*Layout em Colunas */
+
+.info .center-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+
+
+.linha .coluna {
+    width: 33%;
+    box-sizing: border-box;
+    text-align: center;
+    float: left;
+    margin-top: 25px;
+    padding: 0 20px;
+}
+
+.coluna .imagem{
+    width: 100%;
+    min-height: 180px;
+    max-height: 220px;
+    background: #ddd;
+    overflow: hidden;
+    border: solid 1px #999;
+}
+
+.imagem img , .imagem video{
+    width: 100%;
+    display: block;
+}
+
+.imagem video{
+  min-height: 220px;  
+}
+
+.imagem iframe {
+    width: 100%;
+    display: block;
+}
+
+
+.coluna .imagem:hover{
+    box-shadow: 2px 2px 5px #333;
+}
+
+.coluna h3 a {
+   color: #333;
+}
+
+.linha.quatro .coluna {
+    width: 25%;
+}
+
+.linha.quatro .coluna .imagem{
+    min-height: 100px;
+}
+
+.coluna .descricao {
+    text-align: justify;
+    line-height: 16px;
+}
+
+.coluna .descricao a {
+    color: #2d6ff7;
+}
+
+.bt-noticia{
+    border: solid 1px #333;
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 5px;
+    color: #333 !important;
+    font-size: 14px;
+}
+
+.bt-noticia:hover{
+    border-color: #2d6ff7;
+    color: #2d6ff7 !important;
+}
+
+/*poscionamento*/
+
+.coluna-left{
+    margin-top: 25px;
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+
+.conter-lateral {
+    min-height: 500px;
+    border: solid 1px #ddd;
+    background: #f7f7f7;
+    padding: 20px 15px;
+}
+
+.coluna-right{
+    float: right;
+    width: 75%;
+    padding: 10px;
+}
+
+.linha.dupla .coluna{
+    width: 50%;
+}
+
+.coluna .conter{
+    background: #f7f7f7;
+    min-height: 180px;
+}
+
+.bloco-colunas{
+    columns: 3 100px; /*separando colunas texto*/
+}
+
+.transicao{
+    width: 200px;
+    height: 200px;
+    border: solid 1px #333;
+    background: #ddd;
+    text-align: center;
+    padding: 20px;
+    transition-duration: 5s;
+    transition-property: all;
+    transition-delay: 0ms;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    display: none;
+}
+
+.transicao:hover{
+    width: 300px;
+    background: #333;
+    color: #fff;
+    font-weight: bold;
+    border: solid 5px #ddd;
+   
+}
+
+/*Responsividade Site*/
+
+@media (max-width:1097px){
+    .imagem img, .imagem video, .imagem iframe{
+        height: 180px;
+        min-height: 180px;
+        object-fit: cover;
+
+    }
+}
+
+@media (max-width: 686px){
+    .logo{width: 100%; text-align: center;}
+    .menu{width: 100%;}
+    .menu .nav li{
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        text-transform: uppercase;
+        border-bottom: dashed 1px #575c6a; 
+    }
+
+    .menu .nav li:last-child{border: none;}
+    #banner h2{padding-top: 80px; font-size: 48px;}
+    #conteudo .info{width: 100%;}
+    #conteudo .lateral{width: 100%;}
+    .lateral > div {width: 50%; float: left; margin-top: 10px; padding: 0 20px;}
+    .linha .coluna{width: 100%;}
+    .imagem img, .imagem video .imagem iframe{height:280px ;}
+    .linha.quatro .coluna{width: 50%;}
+    .lateral .mapa{width: 100%;}
+    .contato .dupla{width:98% ;}
+    #topo{height: auto; overflow: hidden;}
+    .dropdown {position: static; border: none; display: block;}
+}
+
+@media (max-width: 546px){
+    .lateral > div {width: 100%;}
+    .imagem img, .imagem video ,.imagem iframe{height: 180px;}
+    .linha.quatro .coluna {width: 100%;}
 }

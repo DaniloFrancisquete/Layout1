@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="imagens/css.png">
+    <title>Layout de Exemplo</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!--topo do site-->
+    <header id="topo">
+        <div class="container">
+            <div class="logo">
+                <img src="imagens/css.png" alt="logotipo">
+                Logo
+            </div>
+            <nav class="menu">
+                <ul class="nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="colunas.html">Layout em Colunas</a></li>
+                    <li><a href="posicionamentos.html">Posicionamentos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!--conteudo-->
+    <main id="conteudo">
+        <div class="container">
+            <div class="info">
+                <h1>Entre em Contanto</h1>
+
+                <div class="transicao">
+                    CSS  Transition
+                </div>
+
+                <h2 class="subtitle">Fale conosco preenchendo o formulário abaixo: <br>
+                Se preferir entre em contato através do e-mail
+                faleconosco<wbr>@meudominiodafaempresa<wbr>.com.br
+                </h2>
+                 
+                <form class="contato" enctype="multipart/form-data" action="" method="post">
+                <fieldset class="dupla">  
+                    <legend>Dados Pessoais</legend>
+                    
+                    <label>CPF:</label>
+                    <input class="leitura" type="text" name="cpf" value="000.111.222.99" readonly>
+
+                    <label>Seu Nome: <span>*</span></label>
+                    <input maxlength="5"  minlength="3" type="text" name="Nome" placeholder="Seu Nome" required>
+                    
+                    <label>Seu E-mail: <span>*</span></label>
+                    <input type="email" name="email" placeholder="email" required>
+
+                    <label for="senha">Senha:<span>*</span></label>
+                    <input id="senha" type="password" name="senha">
+
+                    <label for="fone">Telefone:<span>*</span></label>
+                    <input id="fone" type="tel" name="telefone">
+
+                    <label>Idade:<span>*</span></label>
+                    <input type="number" name="idade" max="9" min="3">
+
+                    <label>Seu site:</label>
+                    <input type="url" name="site">
+
+                    <h4>Ja teve experiência com:</h4>
+
+                    <label>
+                    <input type="checkbox" name="php" value="php"> PHP
+                    </label>
+
+                    <label>
+                    <input type="checkbox" name="html" value="html" checked> HTML
+                    </label>
+
+                    <label>
+                    <input type="checkbox" name="css" value="css"> CSS 
+                    </label>
+
+                    <h4>Qual o seu gênero:</h4>
+                    <label>
+                        <input type="radio" name="genero" value="css" value="Masculino"> 
+                        Masculino 
+                    </label>
+                    <label>
+                        <input type="radio" name="genero" value="css" value="Feminino"> 
+                        Feminino 
+                    </label>
+
+                    <label for="">Assunto:</label>
+                        <select multiple required name="assunto" id="">
+                            <option value=""> -- Selecione --</option>
+                            <optgroup label="Dúvidas">
+                            <option>Sobre Serviços</option>
+                            <option>Como Comprar</option>
+                            </optgroup>
+                            <optgroup label="Orçamento">
+                            <option>Serviços</option>
+                            <option>Produtos</option> 
+                             </optgroup>
+                             <optgroup label="Sugestões">
+                            <option>Para Loja Fisica</option>
+                            <option>Para Loja Online</option>
+                            </optgroup>
+                        </select>
+                   
+                        <label for="">Coloque suas observações</label>
+                    <textarea required name="obs" placeholder="Coloque aqui suas sugestões"></textarea>
+                    
+                    
+                </fieldset> 
+
+               
+               
+
+                <fieldset class="dupla">
+                    <legend>Outros Dados</legend>
+                    <label>Envie seu arquivo:</label>
+                    <input type="file" name="arquivo">
+
+                    <label>Escolha sua cor:</label>
+                    <input type="color" name="cor">
+
+                    <label>Data de Nascimento:</label>
+                    <input type="date" name="data">
+
+                    <label>Hora:</label>
+                    <input type="time" name="hora">
+
+                    <label>Data e Hora:</label>
+                    <input type="datetime-local" name="data-hora">
+                    
+                    <label> Mês:</label>
+                    <input type="month" name="mes">
+
+                    <label> Semana:</label>
+                    <input type="week" name="semana">
+
+                    <label> Buscar:</label>
+                    <input type="search" name="buscar">
+
+                    <label> Imgem:</label>
+                    <input type="image" name="imgem">
+
+                    <label>Escala:</label>
+                    <input type="range" name="escala">
+
+                    <input type="hidden" name="oculto" value="22">
+                    
+                    <input list="cursos" name="cursos" placeholder="Selecione o curso de interresse">
+    
+                </fieldset>
+
+                
+                    <!--
+                    <button>Enviar Mensagem</button>-->
+
+                </form>
+                
+                <div class="bt-group">
+                    <input class="bt" type="submit" name="enviar" value="Enviar Mensagem">
+                    <input class="bt limpar" type="reset" name="limpar" value="Limpar Formulário">
+                </div>
+
+                <datalist id="cursos">
+                    <option >HTML</option>
+                    <option >CSS</option>
+                    <option >PHP</option>
+                    <option >JS</option>
+                    <option >Booststrap</option>
+                    <option >React</option>
+                </datalist>
+            </div>
+
+            <aside class="lateral">
+                <h2>Destaques</h2>
+                <div class="noticias">
+                    <div class="ultimas-noticias">
+                        <img src="imagens/office.jpg" alt="Noticia">
+                        <h3>Titulo da noticia em destaque número um</h3>
+                    </div>
+
+                    <div class="ultimas-noticias">
+                        <img src="imagens/office.jpg" alt="Noticia">
+                        <h3>Titulo da noticia em destaque número dois</h3>
+                    </div>
+
+                    <div class="ultimas-noticias">
+                        <img src="imagens/office.jpg" alt="Noticia">
+                        <h3>Titulo da noticia em destaque número três</h3>
+                    </div>
+
+                    <div class="ultimas-noticias">
+                        <img src="imagens/office.jpg" alt="Noticia">
+                        <h3>Titulo da noticia em destaque número quatro</h3>
+                    </div>
+                </div>
+                <div class="menu-lateral">
+                    <h2>Nossos Serviços</h2>
+                    <ul>
+                        <li><a href="#">Serviço 1</a></li>
+                        <li><a href="#">Serviço 2</a></li>
+                        <li><a href="#">Serviço 3</a></li>
+                        <li><a href="#">Serviço 4</a></li>
+                        <li><a href="#">Serviço 5</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.1046820732313!2d-51.14975412467757!3d-23.311960378971932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb437cc4450e41%3A0xed0644bc911dae7e!2sBoulevard%20Shopping%20Londrina!5e0!3m2!1spt-BR!2sbr!4v1709211705684!5m2!1spt-BR!2sbr" 
+                width="600" height="450" style="border:0;" 
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+            </aside>
+        </div>
+    </main>
+
+
+    <!--rodapé-->
+    <footer id="rodape">
+        <p>Desenvolvedor Danilo - Todos os direitos reservado</p>
+    </footer>
+
+</body>
+
+</html>
